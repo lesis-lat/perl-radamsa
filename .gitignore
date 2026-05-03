@@ -1,0 +1,10 @@
+/Makefile
+/MYMETA.json
+/MYMETA.yml
+/Radamsa.bs
+/Radamsa.c
+/Radamsa.o
+/blib/
+/pm_to_blib
+/libradamsa.o
+/radamsa/c/libradamsa.o

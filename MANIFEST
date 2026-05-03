@@ -1,0 +1,12 @@
+examples/mutate-string.pl
+examples/simple-fuzzer.pl
+lib/Radamsa.pm
+LICENSE
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+Radamsa.xs
+radamsa/c/libradamsa.c
+radamsa/c/radamsa.h
+README.md
+t/01-basic.t
