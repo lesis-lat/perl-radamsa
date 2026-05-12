@@ -9,4 +9,5 @@ Radamsa.xs
 radamsa/c/libradamsa.c
 radamsa/c/radamsa.h
 README.md
+RELEASING.md
 t/01-basic.t

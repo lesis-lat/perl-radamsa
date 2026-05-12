@@ -1,19 +1,20 @@
 package Radamsa;
 
-use 5.040;
+use 5.010;
 use strict;
 use warnings;
 
 use Carp qw(croak);
 use Exporter qw(import);
 
-our $VERSION   = '0.01';
+our $VERSION   = '0.02';
 our @EXPORT_OK = qw(mutate);
 
 require XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
 
-sub new ($class, %args) {
+sub new {
+    my ($class, %args) = @_;
     my $self = bless {
         seed      => delete($args{seed}) // _random_seed(),
         max_len   => delete($args{max_len}),
@@ -55,11 +56,13 @@ sub mutate {
     return _mutate_raw($input, int($max_len), int($seed));
 }
 
-sub _random_seed () {
+sub _random_seed {
     return int(rand(4_294_967_296));
 }
 
-sub _default_max_len ($input, $scale = 4) {
+sub _default_max_len {
+    my ($input, $scale) = @_;
+    $scale = 4 unless defined $scale;
     my $len = length $input;
     my $min = 1024;
 

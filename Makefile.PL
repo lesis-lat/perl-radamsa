@@ -9,12 +9,17 @@ WriteMakefile(
     ABSTRACT          => 'Perl 5 bindings for the Radamsa mutational fuzzer',
     AUTHOR            => 'Hugo T. R. Gouvea',
     LICENSE           => 'mit',
-    MIN_PERL_VERSION  => '5.040',
+    MIN_PERL_VERSION  => '5.010',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
     },
     PREREQ_PM         => {
+        'Carp'     => 0,
         'Exporter' => 0,
+        'XSLoader' => 0,
+    },
+    TEST_REQUIRES     => {
+        'Test::More' => 0,
     },
     XS                => { 'Radamsa.xs' => 'Radamsa.c' },
     XSOPT             => '-noprototypes',
